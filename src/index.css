@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-900 text-gray-100 font-space;
+  }
+}
+
+@layer components {
+  .crypto-card {
+    @apply bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-xl;
+  }
+
+  .crypto-button {
+    @apply px-6 py-3 rounded-xl font-medium transition-all duration-200 
+           bg-gradient-to-r from-crypto-primary via-crypto-secondary to-crypto-accent 
+           hover:opacity-90 hover:shadow-lg text-white shadow-md;
+  }
+
+  .crypto-button-secondary {
+    @apply px-6 py-3 rounded-xl font-medium transition-all duration-200 
+           bg-gray-800 hover:bg-gray-700 text-white border border-gray-700;
+  }
+
+  .input-field {
+    @apply w-full bg-gray-800/50 border border-gray-700 rounded-xl px-4 py-3 
+           text-gray-100 focus:ring-2 focus:ring-crypto-primary focus:border-transparent
+           placeholder-gray-500;
+  }
+}
+
+.glass-morphism {
+  background: rgba(17, 25, 40, 0.75);
+  backdrop-filter: blur(16px) saturate(180%);
+}
+
+.animated-gradient {
+  background: linear-gradient(-45deg, #6366f1, #8b5cf6, #3b82f6, #6366f1);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
